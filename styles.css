@@ -1,0 +1,280 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+.home {
+    height: 100vh;
+    background: url('assets/images/your-image.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    padding-top: 60px;
+    /* Adjust for fixed header */
+}
+
+.intro h1 {
+    font-size: 3rem;
+    animation: slideInDown 1.5s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.cta {
+    padding: 10px 20px;
+    background: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-size: 1rem;
+}
+
+.cta:hover {
+    background: #d35400;
+}
+
+.about,
+.services,
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.about h2,
+.services h2,
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p,
+.service-item p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.services .service-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    transition: transform 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f39c12;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    background: #f39c12;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact form button:hover {
+    background: #d35400;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #f39c12;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+}
+
+/* Updated styles for service cards */
+.service-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.service-item:hover {
+    transform: scale(1.05) rotateY(360deg);
+}
+
+/* Remove underline from all links */
+a {
+    text-decoration: none;
+}
+
+/* Link styles */
+nav ul li a,
+.social-media a {
+    color: #fff;
+    /* Default link color */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+.social-media a:hover {
+    color: #f39c12;
+    /* Color change on hover */
+}
