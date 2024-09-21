@@ -1,49 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Arduino Project</title>
+    <title>Freelance Forge - Dylen</title>
     <link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">Freelance Forge</div>
-        <nav>
-            <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#about">About Me</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Service Details Section -->
-    <section class="service-details">
-        <div class="container">
-            <h1>Basic Arduino Project</h1>
-            <img src="assets/images/arduino-basic.jpg" alt="Basic Arduino Project">
-            <p><strong>Price:</strong> $50</p>
-            <p><strong>Description:</strong> This is a basic Arduino project that involves working with fundamental
-                Arduino components and coding. Perfect for beginners looking to get hands-on experience with electronics
-                and programming.</p>
-            <a href="index.html#services" class="cta">Back to Services</a>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div id="particles-js"></div>
+    <div class="intro">
+        <h1>Welcome to Freelance Forge</h1>
+        <p>Your one-stop solution for web development, creative design, and personalized tech projects.</p>
+        <a href="#services" class="cta">Explore Services</a>
+    </div>
+</section>
+
+<!-- About Me Section -->
+<section id="about" class="about fade-in">
+    <h2>About Me</h2>
+    <p>Hello! I’m Dylen, an enthusiastic and passionate web developer and software engineer...</p>
+    
+    <!-- Skill Bars Section -->
+    <h3>Skills</h3>
+    <div class="skills">
+        <div class="skill">
+            <h4>HTML</h4>
+            <div class="skill-bar">
+                <div class="progress" style="width: 90%;"></div>
+            </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Freelance Forge. All rights reserved.</p>
-        <div class="social-media">
-            <a href="#">LinkedIn</a> | <a href="#">Twitter</a> | <a href="#">GitHub</a>
+        <div class="skill">
+            <h4>CSS</h4>
+            <div class="skill-bar">
+                <div class="progress" style="width: 85%;"></div>
+            </div>
         </div>
-    </footer>
+        <div class="skill">
+            <h4>JavaScript</h4>
+            <div class="skill-bar">
+                <div class="progress" style="width: 80%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h4>Node.js</h4>
+            <div class="skill-bar">
+                <div class="progress" style="width: 75%;"></div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- Services Section -->
+<section id="services" class="services fade-in">
+    <h2>Services</h2>
+    <div class="service-list">
+        <!-- Service Cards with Hover Effects -->
+        <div class="service-item">
+            <a href="basic-arduino-project.html">
+                <h3>Basic Arduino Project</h3>
+                <img src="assets/images/arduino-basic.png" alt="Basic Arduino Project">
+            </a>
+        </div>
+        <div class="service-item">
+            <a href="complex-arduino-project.html">
+                <h3>Complex Arduino Project</h3>
+                <img src="assets/images/arduino-complex.jpg" alt="Complex Arduino Project">
+            </a>
+        </div>
+        <!-- Additional service items here -->
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact fade-in">
+    <h2>Contact Me</h2>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </body>
-
 </html>
