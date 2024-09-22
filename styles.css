@@ -145,13 +145,21 @@ header.scrolled {
 }
 
 /* Skill Bars Section */
+/* Skills Section */
 .skills {
     width: 80%;
     margin: 40px auto;
 }
 
-.skill {
+.skill-pair {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
+}
+
+.skill {
+    flex: 1;
+    margin: 0 10px;
     text-align: left;
 }
 
@@ -161,7 +169,6 @@ header.scrolled {
 }
 
 .skill-bar {
-    width: 100%;
     height: 20px;
     background: #ddd;
     border-radius: 10px;
@@ -173,6 +180,19 @@ header.scrolled {
     background: #ff5733;
     border-radius: 10px;
     transition: width 1.5s ease;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .skill-pair {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 /* Services Section */
@@ -190,31 +210,78 @@ header.scrolled {
 .service-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    /* Ensures equal spacing between items */
+    margin-top: 50px;
+    gap: 20px;
+    /* Creates space between items */
 }
 
 .service-item {
-    width: 30%;
-    margin-bottom: 20px;
-    perspective: 1000px;
-    transition: transform 0.3s ease;
+    flex: 1 1 calc(33.333% - 40px);
+    /* Responsive item size: 3 items per row */
+    max-width: 300px;
+    /* Ensure items don't stretch too wide */
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    /* Light border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    /* Center the items */
 }
 
 .service-item:hover {
-    transform: rotateY(10deg) rotateX(5deg);
+    transform: translateY(-10px);
+    /* Slight elevation on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow on hover */
 }
 
 .service-item img {
     width: 100%;
-    border-radius: 10px;
+    height: 180px;
+    /* Consistent image size */
+    object-fit: cover;
+    /* Ensures images maintain aspect ratio */
+    border-radius: 8px;
 }
 
 .service-item h3 {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 1.5rem;
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #333;
 }
 
+/* Adjust the layout on smaller screens */
+@media (max-width: 1024px) {
+    .service-item {
+        flex: 1 1 calc(50% - 40px);
+        /* 2 items per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+        /* Center align items on small screens */
+    }
+
+    .service-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+        /* Full width on mobile */
+        height: auto;
+    }
+}
 /* Contact Section */
 .contact {
     padding: 100px 20px;
