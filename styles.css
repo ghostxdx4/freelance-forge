@@ -144,7 +144,6 @@ header.scrolled {
     margin-right: auto;
 }
 
-/* Skill Bars Section */
 /* Skills Section */
 .skills {
     width: 80%;
@@ -179,10 +178,8 @@ header.scrolled {
     height: 100%;
     background: #ff5733;
     border-radius: 10px;
-    transition: width 1.5s ease;
 }
 
-/* Responsive layout for smaller screens */
 @media (max-width: 768px) {
     .skill-pair {
         flex-direction: column;
@@ -211,22 +208,16 @@ header.scrolled {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* Ensures equal spacing between items */
     margin-top: 50px;
-    gap: 20px;
-    /* Creates space between items */
+    gap: 10px;
 }
 
 .service-item {
     flex: 1 1 calc(33.333% - 40px);
-    /* Responsive item size: 3 items per row */
     max-width: 300px;
-    /* Ensure items don't stretch too wide */
     background-color: #fff;
     border: 1px solid #e0e0e0;
-    /* Light border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
     border-radius: 10px;
     text-align: center;
     padding: 15px;
@@ -235,14 +226,11 @@ header.scrolled {
     flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
-    /* Center the items */
 }
 
 .service-item:hover {
     transform: translateY(-10px);
-    /* Slight elevation on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Stronger shadow on hover */
 }
 
 .service-item img {
@@ -260,11 +248,9 @@ header.scrolled {
     color: #333;
 }
 
-/* Adjust the layout on smaller screens */
 @media (max-width: 1024px) {
     .service-item {
         flex: 1 1 calc(50% - 40px);
-        /* 2 items per row on tablets */
     }
 }
 
