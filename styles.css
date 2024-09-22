@@ -368,3 +368,28 @@ header.scrolled {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+footer p a {
+    color: #ff5733;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer p a:hover {
+    color: #c70039;
+}
