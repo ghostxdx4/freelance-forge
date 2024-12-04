@@ -497,3 +497,31 @@ body::-webkit-scrollbar {
         margin-left: 150px;
     }
 }
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .gradient-btn {
+    margin-left: 0;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .gradient-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
