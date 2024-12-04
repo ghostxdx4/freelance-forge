@@ -513,6 +513,10 @@ body::-webkit-scrollbar {
     margin-left: 0;
     align-self: center;
   }
+
+  #particles-js {
+    height: 200%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -523,5 +527,9 @@ body::-webkit-scrollbar {
   .gradient-btn {
     padding: 8px 16px;
     font-size: 14px;
+  }
+
+  #particles-js {
+    height: 200%;
   }
 }
