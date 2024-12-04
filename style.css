@@ -51,6 +51,53 @@ nav ul li a:hover {
     color: #ff007f;
 }
 
+/* Hamburger menu toggle */
+.menu-toggle {
+    display: none;
+    /* Hide by default */
+}
+
+.menu-toggle img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Hide the menu on small screens by default */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        /* Hide the menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #1a0030;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Show the hamburger menu */
+    }
+
+    .nav-active {
+        display: flex;
+        /* Show menu when active */
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 /* Home Section */
 #home {
     text-align: center;
