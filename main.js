@@ -50,3 +50,11 @@ console.log(
   "%cI see you snooping around, dear developer! 👀",
   "color: #ff007f; font-size: 16px; font-weight: bold;"
 );
+
+// Toggle the visibility of the navigation menu on smaller screens
+const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.getElementById('nav-list');
+
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('nav-active');
+    });
