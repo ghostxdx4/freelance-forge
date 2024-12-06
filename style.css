@@ -180,24 +180,6 @@ nav ul li a {
     font-size: 1.4rem;
 }
 
-/* Responsive - For screens smaller than 768px, display 2 cards per row */
-@media (max-width: 768px) {
-    .skills {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Further optimization for very small screens */
-@media (max-width: 480px) {
-    .skills {
-        grid-template-columns: 1fr;
-    }
-
-    .skill h3 {
-        font-size: 1.2rem;
-    }
-}
-
 .progress-bar {
     background-color: #444;
     border-radius: 5px;
@@ -498,46 +480,6 @@ body::-webkit-scrollbar {
     }
 }
 
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-
-  nav ul li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .gradient-btn {
-    margin-left: 0;
-    align-self: center;
-  }
-
-  #particles-js {
-    height: 200%;
-  }
-
- .gradient-btn {
-     margin-left: 0;
-     align-self: center;
-  }
-}
-
-@media (max-width: 480px) {
-  nav ul li a {
-    font-size: 14px;
-  }
-
-  .gradient-btn {
-    padding: 8px 16px;
-    font-size: 14px;
-
-  #particles-js {
-    height: 200%;
-  }
-}
-
 .gradient-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -562,4 +504,34 @@ body::-webkit-scrollbar {
 .gradient-btn:active {
     transform: scale(1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .gradient-btn {
+    margin-left: 0;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .gradient-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  
 }
