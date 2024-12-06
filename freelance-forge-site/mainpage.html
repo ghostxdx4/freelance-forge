@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Forge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Freelance Forge</h1>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>Welcome to Freelance Forge</h2>
+            <p>Submit your final-year projects and let us help you bring your ideas to life!</p>
+        </section>
+
+        <section id="categories">
+            <h2>Project Categories</h2>
+            <div class="category">
+                <h3>Arduino Projects</h3>
+                <ul>
+                    <li>Basic: ₹2000</li>
+                    <li>Advanced: ₹4000</li>
+                    <li>Complex: ₹10000</li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Drone Building</h3>
+                <p>Price: Contact Us for Pricing</p>
+            </div>
+            <div class="category">
+                <h3>Website Development</h3>
+                <ul>
+                    <li>Static - Basic: ₹2000</li>
+                    <li>Static - Advanced: ₹4000</li>
+                    <li>Dynamic - Basic: ₹8000</li>
+                    <li>Dynamic - Advanced: ₹12000</li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Basic Windows Software Development</h3>
+                <p>Price: ₹5000</p>
+            </div>
+        </section>
+
+        <section id="submit-project">
+            <h2>Submit Your Project</h2>
+            <form id="project-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="category">Select Category:</label>
+                <select id="category" name="category" required>
+                    <option value="arduino">Arduino Project</option>
+                    <option value="drone">Drone Building</option>
+                    <option value="website">Website Development</option>
+                    <option value="software">Windows Software Development</option>
+                </select>
+
+                <label for="details">Project Details:</label>
+                <textarea id="details" name="details" rows="5" placeholder="Describe your project" required></textarea>
+
+                <button type="submit">Submit Project</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Freelance Forge. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
